@@ -70,6 +70,3 @@ boosting = gbm(Collection~., data = train, distribution="gaussian",n.trees =5000
 #distribution = 'Gaussian' for regression and 'Bernoulli' for classification
 test$boost = predict (boosting, test, n.trees =5000)
 MSE2boost <- mean((test$boost - test$Collection)^2)
-
-
-
